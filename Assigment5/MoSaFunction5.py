@@ -39,5 +39,3 @@ def KhayyamPascalsTriangle(n):
             KPT[i][j] = KPT[i-1][j-1] + KPT[i-1][j]
             print(KPT[i][j] ,end="\t")
         print("")
-
-    print("end")
