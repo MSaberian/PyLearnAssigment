@@ -44,6 +44,7 @@ def get_point(player_points, player_name):
 
 def check_game(player_points, player_name):
     sum2 = 0
+    sum3 = 0
     for i in range(3):
         sum0 = 0
         sum1 = 0
@@ -54,9 +55,11 @@ def check_game(player_points, player_name):
                 sum1 += 1
 
         if [i,i] in player_points:
-                sum2 += 1
+            sum2 += 1
+        if [i,2-i] in player_points:
+            sum3 += 1
         
-        if sum0 == 3 or sum1 == 3 or sum2 == 3:
+        if sum0 == 3 or sum1 == 3 or sum2 == 3 or sum3 == 3:
             print("\n\n *** ", player_name," win 🎉🎉👌🏻 ***\n\n")
             return True
     
