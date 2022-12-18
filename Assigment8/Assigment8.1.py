@@ -1,8 +1,6 @@
 import os
 import imageio
 
-print(gtts.lang.tts_langs())
-
 file_list = sorted(os.listdir('images'))
 
 IMAGES = []
