@@ -1,7 +1,7 @@
 from datetime import date, datetime
 from khayyam import JalaliDate, jalali_datetime
 
-class my_datetime:
+class My_date:
     def __init__(self):
         self.my_date_HS = [1, 1, 1] # Hijri solar Calendar
         self.my_date_HS_month = 'farvardin'

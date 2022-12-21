@@ -1,4 +1,4 @@
-class fractions:
+class Fractions:
     def __init__(self):
         self.numerator = 1
         self.denominator = 1

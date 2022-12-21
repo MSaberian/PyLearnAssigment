@@ -1,5 +1,5 @@
 
-class my_time:
+class My_time:
     def __init__(self):
         self.my_time = [0, 0, 0]
 
