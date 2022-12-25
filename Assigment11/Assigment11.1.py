@@ -49,7 +49,6 @@ class Fraction:
 
     def simplify_the_fraction(self):
         GCD = Fraction.greatest_common_divisor(self)
-        print(GCD)
         x = Fraction(self.s / GCD, self.m / GCD)
         return x
     
