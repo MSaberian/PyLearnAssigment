@@ -5,11 +5,11 @@ Divisors1 = []
 Divisors2 = []
 Greatest_Common_Divisor = 1
 
-for i in range(1,num1):
+for i in range(1,num1+1):
     if (num1 / i).is_integer():
         Divisors1.append(i)
         
-for i in range(1,num2):
+for i in range(1,num2+1):
     if (num2 / i).is_integer():
         Divisors2.append(i)
         if i in Divisors1:
