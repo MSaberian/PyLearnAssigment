@@ -1,6 +1,5 @@
 class Time:
     def __init__(self, hour, minute, second):
-        print('this is init')
         self.hour = hour
         self.minute = minute
         self.second = second
@@ -14,42 +13,63 @@ class Time:
         m_new = self.minute + other.minute
         h_new = self.hour + other.hour
         result = Time(h_new, m_new, s_new)
-        # result.fix()
         return result
-        return "adsdasf lkjfdls jdsf s"
 
     def sub(self, other):
         s_new = self.second - other.second
         m_new = self.minute - other.minute
         h_new = self.hour - other.hour
         result = Time(h_new, m_new, s_new)
-        # result.fix()
         return result
-        return "adsdasf lkjfdls jdsf s"
 
+    def convert_second_to_time(self, second):
+        x = Time(0, 0, second)
+        return x
+
+    def convert_time_to_second(self):
+        second = (self.hour * 60 + self.minute) * 60 + self.second
+        return second
+        
+    def convert_GMT_to_Tehran(self):
+        Tehran = Time(3, 30, 0)
+        x = Time.sum(self, Tehran)
+        return x
+ 
     def fix(self):
-        if self.second >= 60:
+        while self.second >= 60:
             self.second -= 60
             self.minute += 1
 
-        if self.minute >= 60:
+        while self.minute >= 60:
             self.minute -= 60
             self.hour += 1
 
-        if self.second < 0:
+        while self.hour >= 24:
+            self.hour -= 24
+
+        while self.second < 0:
             self.second += 60
             self.minute -= 1
 
-        if self.minute < 0:
+        while self.minute < 0:
             self.minute += 60
             self.hour -= 1
+            
+        while self.hour < 0:
+            self.hour += 24
 
-
-t1 = Time(3, 80, 17)
+t1 = Time(3, 15, 20)
 t1.show()
 
-t2 = Time(4, 26, 2)
+t2 = Time(3, 15, 22)
 t2.show()
 
-t3 = t1.sum(t2)
+t3 = t1.sub(t2)
 t3.show()
+
+t4 = Time(1, 1, 1)
+# t4 = t4.convert_second_to_time(60*60*2 + 60*23 + 56)
+# print(t4.convert_time_to_second())
+t5 = t4.convert_GMT_to_Tehran()
+t5.show()
+

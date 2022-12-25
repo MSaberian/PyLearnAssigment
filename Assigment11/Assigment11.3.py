@@ -4,13 +4,30 @@ class Complex:
         self.image = image
 
     def show(self):
-        print(self.real, '+', 'i', self.image)
+        sign = '+'
+        if self.image < 0:
+            sign = '-'
+        print(self.real, sign, f'i{abs(self.image)}')
 
-    def sum():
-        ...
+    def sum(self, other):
+        x = Complex(self.real + other.real, self.image + other.image)
+        return x
 
-    def sun():
-        ...
+    def sub(self, other):
+        x = Complex(self.real - other.real, self.image - other.image)
+        return x
 
-a = Complex(4 , 6)
+    def mul(self, other):
+        real = self.real * other.real - self.image * other.image
+        image = self.real * other.image + self.image * other.real
+        x = Complex(real, image)
+        return x
+
+a = Complex(-4 , 6)
 a.show()
+
+b = Complex(6 , -9)
+b.show()
+
+c = a.mul(b)
+c.show()
