@@ -19,7 +19,7 @@ class Database:
             line = line.replace('\n', '')
             result = line.split(",")
             if line[0] == '@':
-                new_media.Actor = ACTORS
+                new_media.casts = ACTORS
                 MEDIA.append(new_media)
                 line_number = 0
                 
