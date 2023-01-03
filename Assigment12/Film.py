@@ -1,0 +1,13 @@
+from Media import Media
+
+class Film(Media):
+    def __init__(self,name,director,IMDB_cvore,duration):
+        super().__init__(name,director,IMDB_cvore,duration)
+        self.production_year = ...
+        # self.season = ...
+
+    # def showinfo(self):
+    #     ...
+
+    # def download(self):
+    #     ...

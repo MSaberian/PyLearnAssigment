@@ -1,0 +1,36 @@
+S,The Big Bang Theory,Mark Sandrosky,8.1,20,279,12,2007,2019,True
+United States,
+sitcom
+https://www.cdn4.dlmvz.ir/b2/series/big-bang-theory/the.big.bang.theory.s07e01.720p.5.1ch.bluray.mkv?1672616332
+Johnny,Galecki,1975,m
+Kaley,Christine Cuoco,1985,f
+Simon,Maxwell Helberg,1980,m
+Kunal,Nayyar,1981,f
+Sara,Gilbert,1975,m
+Melissa,Rauch,1980,f
+Jim,Parsons,1973,m
+Kevin,Sussman,1970,m
+@
+F,Interstellar,christopher nolan,8.6,169,2014
+United Kingdom,United States
+drama, science fiction, adventure, thriller
+https://dl20.freeserver.top/www2/film/1399/06/Interstellar.2014.720p.BluRay.HardSub.DigiMoviez.mp4?md5=97Pw3xFoXrD8glDav3Udmg&expires=1672996239&uini=QldEbEZud0VCTDBXTXorbkR0ZzJqTzBJZ2FKa0EzMUNPZ2dCdVl6TzdsMTJ2VE5KOVdEUVQ4R2sxSmNlTlV6UEk4UDY5QzErckJlbk5PWEZXT3FwWTJucE50THNhZlhCNHI4Q256TjNXQ2xKWTdTblgxUU92VTh0eWhraXZ4Mms5Y0M5S2poWjFvcWlHQ09UV2hFV05vdW5uTEozQzVzczJ5RDdUMWN0SVV4cm90TlhSbklURklMQnRoTDlySGFDd2pHNGJmdy9tb3ZjTGxKbjZyT2lZZURHWnVSbG8rUjJLalY2UGxVWWRRNVdBQ2k1UkZZRnRaREIrMU9OK2RyVlRKZGxLNld1WGM4d3lZV3dLQjZQdlE9PQ=
+Matthew,McConaughey,1975,m
+Anne,Jacqueline Hathaway,1985,m
+Jessica,Michelle Chastain,1980,f
+Bill,Irwin,1981,m
+Ellen,Burstyn,1973,f
+Sir,Michael Caine,1970,m
+@
+S,Rick and Morty,Justin Roiland,9.1,23,62,6,2013,-,False
+United States,
+animation, science fiction, comedy, adventure
+https://www.cdn4.dlmvz.ir/b2/series/big-bang-theory/the.big.bang.theory.s07e01.720p.5.1ch.bluray.mkv?1672616332
+justin,roiland,1980,m
+chris,parnell,2002,f
+Spencer,Grammer,1980,m
+Sarah,Chalke,1979,m
+kari,wahlgren,1990,f
+Dan,Harmon,1991,f
+Maurice,LaMarche,1986,m
+@

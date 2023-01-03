@@ -22,9 +22,11 @@ class Time:
         result = Time(h_new, m_new, s_new)
         return result
 
-    def convert_second_to_time(self, second):
+    @staticmethod
+    def convert_second_to_time(second):
         x = Time(0, 0, second)
         return x
+
 
     def convert_time_to_second(self):
         second = (self.hour * 60 + self.minute) * 60 + self.second
@@ -33,6 +35,8 @@ class Time:
     def convert_GMT_to_Tehran(self):
         Tehran = Time(3, 30, 0)
         x = Time.sum(self, Tehran)
+        # t = Time(30, 30, 0)
+        # x = self.sum(t)
         return x
  
     def fix(self):
@@ -73,3 +77,5 @@ t4 = Time(1, 1, 1)
 t5 = t4.convert_GMT_to_Tehran()
 t5.show()
 
+t6 = Time.convert_second_to_time(60*60*2 + 60*23 + 56)
+t6.show()
