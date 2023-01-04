@@ -55,12 +55,33 @@ class Database:
         self.number_media = index
         self.Media =  MEDIA
         return MEDIA
-
-    def write(self):
-        open('media_database.txt', 'w').close()
-        file_object = open('media_database.txt', 'a')
-        # for product in PRODUCTS:
-        #     file_object.write(str(product["code"])+","+str(product['name'])+','+str(product['price'])+','+str(product['count'])+'\n')
+    
+    def write_to_database(self): 
+        open(self.path, 'w').close()
+        file_object = open(self.path, 'a')
+        temp_string = ''
+        for media in self.Media:
+            typemedia = media.type.capitalize()[0]
+            temp_string += typemedia + ',' + media.name + ',' + media.director + ',' + media.IMDB_score + ',' + media.duration + ','
+            if media.type == 'series':
+                temp_string += media.number_episodes + ',' + media.number_season + ',' + media.start_year + ',' + media.end_year + ',' + media.Finished
+            elif media.type == 'film':
+                temp_string += media.production_year
+            # ...
+            temp_string += '\n' 
+            for i in range(len(media.country)-1):
+                temp_string += media.country[i] + ','
+            temp_string += media.country[-1] 
+            temp_string += '\n' 
+            for i in range(len(media.genre)-1):
+                temp_string += media.genre[i] + ','
+            temp_string += media.genre[-1] 
+            temp_string += '\n' + media.url[0]
+            for actor in media.casts:
+                temp_string += '\n' + actor.name + ',' + actor.family + ',' + actor.year_birth + ',' + actor.sex
+            temp_string += '\n@'
+            file_object.write(temp_string)
+            temp_string = '\n'
         file_object.close()
 
     def add(self):
@@ -73,7 +94,7 @@ class Database:
         self.Media.append(new_media)
 
     def edit(self):
-        user_input = input("enter your code: ")
+        user_input = input("enter your index: ")
         index = int(user_input)
         if 0 < index <= self.number_media:
             Medias = self.Media
@@ -99,10 +120,8 @@ class Database:
     def media(self,index):
         return self.Media[index-1]
 
-    def show_list(self):
-        Medias = self.Media
-        for i in range(len(Medias)):
-            print(i+1,'-',Medias[i].name)
+    def remove(self,index):
+        self.Media.pop(index-1)
 
     def search_name(self,sabject):
         Medias = self.Media
