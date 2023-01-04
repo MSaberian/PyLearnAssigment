@@ -9,6 +9,7 @@ class Media:
         self.genre = ...
         self.country = ...
         self.type = ...
+        self.index = ...
 
     def showinfoHiden(self):
         print('IMDB score:',self.IMDB_score)
@@ -21,9 +22,7 @@ class Media:
         for i in range(len(self.genre)-1):
             print(self.genre[i], end=', ')
         print(self.genre[-1])      
-        print('Link(s) download:')
-        for i in range(len(self.url)):
-            print(self.url[i])
+        print('Link download:',self.url[0])
         print('Actors:')
         for i in range(len(self.casts)):
             print(self.casts[i].name,self.casts[i].family,'is a',self.casts[i].sex,'that was born in',self.casts[i].year_birth)

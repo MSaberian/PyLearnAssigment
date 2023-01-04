@@ -20,11 +20,6 @@ def write_to_database():
         file_object.write(str(product["code"])+","+str(product['name'])+','+str(product['price'])+','+str(product['count'])+'\n')
     file_object.close()
 
-#     1001,piaz,3600,500
-# 1002,sos,15000,122
-# 1003,nushabe,10000,321
-
-
 def add():
     code = input("enter code: ")
     name = input("enter name: ")
@@ -52,7 +47,6 @@ def edit():
                 new_count = input('New count: ')
                 product['count'] = new_count
             print('Data changed successfully')
-
             break
     else:
         print("not found")

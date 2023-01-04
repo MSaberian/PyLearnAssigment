@@ -1,8 +1,8 @@
 from Media import Media
 
 class Film(Media):
-    def __init__(self,name,director,IMDB_cvore,duration):
-        super().__init__(name,director,IMDB_cvore,duration)
+    def __init__(self,name,director,IMDB_score,duration):
+        super().__init__(name,director,IMDB_score,duration)
         self.production_year = ...
         self.type = 'film'
         # self.season = ...
