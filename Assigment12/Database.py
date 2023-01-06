@@ -86,12 +86,53 @@ class Database:
 
     def add(self):
         print("To add new media, please complete the following parameters.")
+        print("In first enter type of media:")
+        print("1- film      2- series   3- documentry   4- clip")
+        type_medai = int(input("enter your choice: "))
         name = input("enter name: ")
         director = input("enter director: ")
         IMDB_score = input("enter IMDB score: ")
         IMDB_duration = input("enter duration: ")
-        new_media = Film(name,director,IMDB_score,IMDB_duration)
+        if type_medai == 1:
+            new_media = Film(name,director,IMDB_score,IMDB_duration)
+            new_media.production_year = input("enter production year: ")
+            new_media.type = 'film'
+        elif type_medai == 2:
+            new_media = Series(name,director,IMDB_score,IMDB_duration)
+            new_media.number_episodes = input("enter number episodes: ")
+            new_media.number_season = input("enter number season: ")
+            new_media.start_year = input("enter start year: ")
+            new_media.end_year = input("enter end year: ")
+            new_media.Finished = input("enter Finished: ")
+            new_media.type = 'series'
+        elif type_medai == 3:
+            new_media = Documentary(name,director,IMDB_score,IMDB_duration)
+            new_media.production_year = input("enter production year: ")
+            new_media.type = 'documentary'
+        else:
+            new_media = Clip(name,director,IMDB_score,IMDB_duration)
+            new_media.production_year = input("enter production year: ")
+            new_media.type = 'clip'
+        countries = input("enter countries name with \",\" between them: ")
+        new_media.country = countries.split(",")
+        genres = input("enter genres with \",\" between them: ")
+        new_media.genre = countries.split(",")
+        links = input("enter download links with \",\" between them: ")
+        new_media.url = links.split(",")
+        print('enter actors information.')
+        while True:
+            name = input("enter name actor: ")
+            family = input("enter family actor: ")
+            year_birth = input("enter year birth actor: ")
+            sex = input("enter actor sex: ")
+            new_actor = Actor(name, family, year_birth, sex)
+            new_media.casts.append(new_actor)
+            answer_user = input('do you want add new actor or finish? enter y (to yes) or n (to no): ')
+            if answer_user == 'n':
+                break
+        new_media.index = self.number_media + 1
         self.Media.append(new_media)
+        self.number_media += 1
 
     def edit(self):
         user_input = input("enter your index: ")
@@ -124,19 +165,20 @@ class Database:
         self.Media.pop(index-1)
 
     def search_name(self,sabject):
-        Medias = self.Media
-        for media in Medias:
+        # Medias = self.Media
+        for media in self.Media:
             if sabject.lower() in media.name.lower():
-                print(media.index,'-',media.name)
+                # print(media.index,'-',media.name)
+                media.showinfo()
 
     def search_index(self,sabject):
         Medias = self.Media
         if type(sabject) == int:
             index = int(sabject)
-            if index <= (len(Medias)):
-                print(Medias[index-1].index,'-',Medias[index-1].name)
-        else:
-            ...
+            if 0 < index <= self.number_media:
+                Medias[index-1].showinfo()
+                # print(Medias[index-1].index,'-',Medias[index-1].name)
+                
 
 
 # d = Database()

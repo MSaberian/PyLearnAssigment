@@ -33,11 +33,11 @@ while True:
             elif choice == 4:
                 UI.search(d)
             elif choice == 5:
-                show_list()
+                UI.show_list(d)
             elif choice == 6:
-                buy()
+                print(d.number_media)
             elif choice == 7:
-                qrcode0()
+                ...
             elif choice == 8:
                 d.write_to_database()
                 exit(0)

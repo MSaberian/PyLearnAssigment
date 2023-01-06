@@ -34,3 +34,10 @@ kari,wahlgren,1990,female
 Dan,Harmon,1991,female
 Maurice,LaMarche,1986,male
 @
+F,sfsd,sdf,1.2,162,1236
+fsdfds,sdfds,fsd
+fsdfds,sdfds,fsd
+sdfsdfsadfafd
+fsdfsd,sdfre,1326,male
+dasdas,dwef,1235,female
+@
