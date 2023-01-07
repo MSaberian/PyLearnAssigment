@@ -29,7 +29,7 @@ while True:
             elif choice == 2:
                 d.edit()
             elif choice == 3:
-                d.remove()
+                UI().remove(d)
             elif choice == 4:
                 UI.search(d)
             elif choice == 5:

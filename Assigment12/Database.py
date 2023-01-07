@@ -41,6 +41,12 @@ class Database:
                 elif Type_media == 'F':
                     new_media = Film(result[1],result[2],result[3],result[4])
                     new_media.production_year = result[5]
+                elif Type_media == 'D':
+                    new_media = Documentary(result[1],result[2],result[3],result[4])
+                    new_media.production_year = result[5]
+                elif Type_media == 'C':
+                    new_media = Clip(result[1],result[2],result[3],result[4])
+                    new_media.production_year = result[5]
             elif line_number == 2:
                 new_media.country = result
             elif line_number == 3:
@@ -67,7 +73,10 @@ class Database:
                 temp_string += media.number_episodes + ',' + media.number_season + ',' + media.start_year + ',' + media.end_year + ',' + media.Finished
             elif media.type == 'film':
                 temp_string += media.production_year
-            # ...
+            elif media.type == 'documentary':
+                temp_string += media.production_year
+            elif media.type == 'clip':
+                temp_string += media.production_year
             temp_string += '\n' 
             for i in range(len(media.country)-1):
                 temp_string += media.country[i] + ','
@@ -178,6 +187,11 @@ class Database:
             if 0 < index <= self.number_media:
                 Medias[index-1].showinfo()
                 # print(Medias[index-1].index,'-',Medias[index-1].name)
+
+    def search_duration(self,duration1,duration2):
+        for media in self.Media:
+            if duration1 <= int(media.duration) <= duration2:
+                media.showinfo()
                 
 
 

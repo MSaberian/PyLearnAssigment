@@ -37,14 +37,23 @@ class UI():
     @staticmethod
     def search(database):
         print("Do you want search index or name?")
-        print("1- index      2- name  ")
+        print("1- index      2- name    3- duration")
         user_choice = int(input('your choice: '))
         if user_choice == 1:
             user_choice = int(input('your search index: '))
             database.search_index(user_choice)
-        else:
+        elif user_choice == 2:
             user_choice = input('your search name: ')
             database.search_name(user_choice)
+        elif user_choice == 3:
+            user_choice1 = int(input('your search duration 1: '))
+            user_choice2 = int(input('your search duration 2: '))
+            database.search_duration(user_choice1,user_choice2)
+
+    @staticmethod
+    def remove(database):
+        user_choice = int(input('your remove index: '))
+        database.remove(user_choice-1)
 
 
 
