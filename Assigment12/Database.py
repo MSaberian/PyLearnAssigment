@@ -171,13 +171,13 @@ class Database:
         return self.Media[index-1]
 
     def remove(self,index):
-        self.Media.pop(index-1)
+        self.Media.pop(index)
+        for i in range(self.number_media-1):
+            self.media(i+1).index = i + 1
 
     def search_name(self,sabject):
-        # Medias = self.Media
         for media in self.Media:
             if sabject.lower() in media.name.lower():
-                # print(media.index,'-',media.name)
                 media.showinfo()
 
     def search_index(self,sabject):
@@ -186,18 +186,16 @@ class Database:
             index = int(sabject)
             if 0 < index <= self.number_media:
                 Medias[index-1].showinfo()
-                # print(Medias[index-1].index,'-',Medias[index-1].name)
 
     def search_duration(self,duration1,duration2):
         for media in self.Media:
             if duration1 <= int(media.duration) <= duration2:
                 media.showinfo()
+
+
+    def download(self,index):
+        Medias = self.Media
+        if 0 < index <= self.number_media:
+            print(Medias[index-1].name + 'is downloading, this may take several minutes')
+            Medias[index-1].download()
                 
-
-
-# d = Database()
-# MEDIA = d.read()
-# # MEDIA = Database().read()
-# print(MEDIA[0].Actor[0].name)
-# print(MEDIA[1].name)
-# print(MEDIA[2].url[0])

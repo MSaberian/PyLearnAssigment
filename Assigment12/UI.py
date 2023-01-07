@@ -30,9 +30,8 @@ class UI():
         print("3- Remove")
         print("4- Search")
         print("5- Show List")
-        print("6- Buy")
-        print("7- Creat Qr Code")
-        print("8- Exit")
+        print("6- download")
+        print("7- Exit")
 
     @staticmethod
     def search(database):
@@ -52,36 +51,10 @@ class UI():
 
     @staticmethod
     def remove(database):
-        user_choice = int(input('your remove index: '))
+        user_choice = int(input('your media index to remove: '))
         database.remove(user_choice-1)
-
-
-
-    # while True:
-    #     show_menu()
-    #     choice_user = input("enter your choice: ")
-    #     if choice_user.isdigit():
-    #         choice = int(choice_user)
-    #         if 0 < choice < 9:
-    #             if choice == 1:
-    #                 add()
-    #             elif choice == 2:
-    #                 edit()
-    #             elif choice == 3:
-    #                 remove()
-    #             elif choice == 4:
-    #                 search()
-    #             elif choice == 5:
-    #                 show_list()
-    #             elif choice == 6:
-    #                 buy()
-    #             elif choice == 7:
-    #                 qrcode0()
-    #             elif choice == 8:
-    #                 write_to_database()
-    #                 exit(0)
-    #         else:
-    #             print('⚠ you have to enter number between 1-8')
-    #     else:
-    #         print('⚠ you have to enter number between 1-8')
         
+    @staticmethod
+    def download(database):
+        user_choice = int(input('your media index to download: '))
+        database.download(user_choice)

@@ -1,3 +1,5 @@
+import pytube
+
 class Media:
     def __init__(self,name,director,IMDB_score,duration):
         self.name = name
@@ -29,4 +31,5 @@ class Media:
 
 
     def download(self):
-        ...
+        first_stream = pytube.YouTube(self.url[0]).streams.first()
+        first_stream.download(output_path='./',filename= self.name + '.mp4')
