@@ -10,6 +10,3 @@ class Documentary(Media):
         print('\n *** ### ***\n')
         print(self.name,'is a',self.production_year,self.type,'directed by',self.director)
         self.showinfoHiden()
-
-    # def download(self):
-    #     ...

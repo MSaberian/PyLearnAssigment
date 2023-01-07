@@ -22,7 +22,7 @@ while True:
     choice_user = input("enter your choice: ")
     if choice_user.isdigit():
         choice = int(choice_user)
-        if 0 < choice < 8:
+        if 0 < choice < 9:
             if choice == 1:
                 d.add()
             elif choice == 2:
@@ -36,9 +36,11 @@ while True:
             elif choice == 6:
                 UI.download(d)
             elif choice == 7:
+                UI.dancing(d)
+            elif choice == 8:
                 d.write_to_database()
                 exit(0)
         else:
-            print('⚠ you have to enter number between 1-7')
+            print('⚠ you have to enter number between 1-8')
     else:
-        print('⚠ you have to enter number between 1-7')
+        print('⚠ you have to enter number between 1-8')

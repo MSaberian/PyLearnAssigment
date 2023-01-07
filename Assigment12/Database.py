@@ -192,10 +192,15 @@ class Database:
             if duration1 <= int(media.duration) <= duration2:
                 media.showinfo()
 
-
     def download(self,index):
         Medias = self.Media
         if 0 < index <= self.number_media:
             print(Medias[index-1].name + 'is downloading, this may take several minutes')
             Medias[index-1].download()
-                
+
+    def dancing(self,index):
+        Medias = self.Media
+        if 0 < index <= self.number_media:
+            for actor in self.media(index).casts:
+                print(actor.name)
+                actor.dance()

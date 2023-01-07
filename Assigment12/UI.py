@@ -31,7 +31,8 @@ class UI():
         print("4- Search")
         print("5- Show List")
         print("6- download")
-        print("7- Exit")
+        print("7- dancing")
+        print("8- Exit")
 
     @staticmethod
     def search(database):
@@ -58,3 +59,8 @@ class UI():
     def download(database):
         user_choice = int(input('your media index to download: '))
         database.download(user_choice)
+
+    @staticmethod
+    def dancing(database):
+        user_choice = int(input('your media index that you want to this actors dance for you: '))
+        database.dancing(user_choice)

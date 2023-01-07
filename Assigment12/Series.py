@@ -19,6 +19,3 @@ class Series(Media):
         else:
             print('And it has been shown since',self.start_year,'and continues.')
         self.showinfoHiden()
-
-    # def download(self):
-    #     ...

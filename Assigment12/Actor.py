@@ -6,10 +6,9 @@ class Actor:
         self.sex = sex
 
     def dance(self):
-        if self.sex == 'f':
+        if self.sex == 'female':
             print('💃🏻💃🏻💃🏻')
-        else:
+        elif self.sex == 'bisexual':
             print('🤷🏻‍♂️🤦🏻‍♂️🤷🏻‍♂️')
-
-    # def download(self):
-    #     ...
+        else:
+            print('🕺🏻🕺🏻🕺🏻')
