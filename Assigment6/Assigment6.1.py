@@ -5,7 +5,6 @@ from colorama import Fore
 from colorama import Style
 
 
-
 title = pyfiglet.figlet_format("TicTacToe",font="standard")
 print(title)
 
