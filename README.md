@@ -46,7 +46,7 @@ Description of assignments.
 
 7. Calculate the number of words in a sentence.
 
-# Assigment 20
+## Assigment 20
 
 Work with lists.
 
