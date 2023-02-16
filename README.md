@@ -1,8 +1,8 @@
-# PyLearnAssigment
+# PyLearn Assigment
 
 Description of assignments. 
 
-## Assignment 1
+## Assigment 1
 
 1. Calculator and BMI index
 
@@ -13,7 +13,7 @@ Description of assignments.
 4. Calculation of BMI index
 
 
-## Assignment 2
+## Assigment 2
 
 1. Guess number game.
 
@@ -30,7 +30,7 @@ Description of assignments.
 7. Writing Fibo Tanchi sequence.
 
 
-## Assignment 3
+## Assigment 3
 
 1. HangMan Game.
 
@@ -45,4 +45,11 @@ Description of assignments.
 6. Calculation of K.M.M. of two numbers.
 
 7. Calculate the number of words in a sentence.
+
+# Assigment 20
+
+Work with lists.
+
+1. In ChechSymmetry check is the list is symmetry or not.
+2. GettingMarried combine two list of boys and girls to get married!
 
