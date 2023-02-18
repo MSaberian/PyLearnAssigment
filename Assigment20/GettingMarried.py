@@ -6,8 +6,8 @@ girls = ['mahtab', 'hane', 'harir', 'fateme', 'kiana', 'faezeh', 'minoo', 'mina'
 pair = []
 print('pairs =',end=' ')
 for i in range(min(len(boys),len(girls))):
-    boy = boys[random.randint(0, len(boys)-1)]
-    girl = girls[random.randint(0, len(girls)-1)]
+    boy = random.choice(boys)
+    girl = random.choice(girls)
     pair.append([boy,girl])
     boys.remove(boy)
     girls.remove(girl)
