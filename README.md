@@ -53,3 +53,6 @@ Work with lists.
 1. In ChechSymmetry check is the list is symmetry or not.
 2. GettingMarried combine two list of boys and girls to get married!
 
+## Assigment 21
+
+Create music whit pysynth.
